@@ -1,0 +1,20 @@
+{
+  "labels":[
+    "Sexual Misconduct",
+    "Shooting",
+    "Safety Hazard",
+    "Theft",
+    "Suspicious Activity",
+    "Sexual Abuse",
+    "Fire",
+    "Robbery",
+    "Shots Fired",
+    "Armed Robbery",
+    "Motor Theft",
+    "Attempted Robbery",
+    "Stabbing",
+    "Shooting, Attempted Robbery"
+  ],
+  "threshold":0.0,
+  "positive_label":null
+}
