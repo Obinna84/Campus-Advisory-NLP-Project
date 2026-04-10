@@ -1,0 +1,94 @@
+# spaCy Classifications (NLP tool for classifying campus safety alert types)
+
+**Branch:** `add-nlp`  
+**Author:** Obinna  
+**Date:** April 10, 2026
+
+## Overview
+Used Campus Advisory Alerts to train spaCy NLP model to classify the type of crime being reported on
+
+## Changes Made
+
+### 1. Model Training (`classifications.py`)
+- Replaced BERT-based training with spaCy textcat pipeline.
+- Added data loading from `data/sample_alerts.csv` with encoding fixes (`latin-1`).
+- Combined `description` and `location` into a single `alert` text for training.
+- Used spaCy `Example` objects for training data preparation.
+- Implemented minibatch training with compounding batch sizes.
+- Evaulates accuracy after 10 epochs ran and saves model in (`./spacy_model`)
+- Included test predictions for sample alerts.
+
+### 2. Dependencies (`requirements.txt`)
+- Added `spacy>=3.7.0` for NLP processing.
+- Added `scikit-learn>=1.3.0` for data splitting and utilities.
+- Added `spacy-lookups-data` for spaCy language data tables.
+- Retained existing dependencies: `streamlit`, `pandas`, `folium`, `geopy`.
+
+### 3. Data Handling
+- Fixed CSV reading with `encoding='latin-1'` to handle invalid UTF-8 bytes.
+- Added data cleaning: filled NaN values and skipped empty rows to prevent training errors.
+- Ensured all text inputs are strings before spaCy processing.
+
+### 4. Model Architecture
+- Used `en_core_web_sm` as the base spaCy model.
+- Added `textcat` pipeline for multi-label classification of alert categories.
+- Trained on categories: Sexual Misconduct, Theft, Violence, Suspicious Activity, Safety Hazard, Vehicle Incident, Other.
+- Used spaCy's built-in NER for location extraction (GPE, LOC, FAC entities).
+
+### 5. Training Improvements
+- Implemented stratified train/validation split (80/20).
+- Added early stopping logic via accuracy tracking.
+- Used `compounding` batch sizes for efficient training.
+- Printed losses and accuracy per epoch for monitoring.
+
+### 6. Prediction and Evaluation
+- Added `predict_category()` function for inference.
+- Evaluated on validation set with accuracy metric.
+- Tested on sample alerts to verify predictions.
+
+### 7. Integration Preparation
+- Model saved in spaCy format for easy loading in Streamlit app.
+- To load in `app.py`: Add `import spacy` with try/except for missing installation; use `@st.cache_resource` to load `spacy.load("./spacy_model")`.
+- Update `classify_text()` to try spaCy prediction first (`max(doc.cats, key=doc.cats.get)`), fallback to keyword matching.
+- Update `extract_location()` to try spaCy NER first (`[ent.text for ent in doc.ents if ent.label_ in {"GPE", "LOC", "FAC"}]`), fallback to regex rules.
+- Kept fallback logic in mind for keyword-based classification if spaCy fails.
+
+## Notes
+- SpaCy chosen over BERT due to smaller dataset size and faster training.
+- Model achieves reasonable accuracy on validation set; further tuning possible with more data.
+- Future work: integrate into `app.py` with sidebar toggle for spaCy vs. rule-based processing.
+
+## Testing Checklist
+- [ ] Install dependencies: `pip install -r requirements.txt`
+- [ ] Download spaCy model: `python -m spacy download en_core_web_sm`
+- [ ] Install spaCy lookups: `pip install spacy-lookups-data`
+- [ ] Run training script: `python3 classifications.py` and verify it completes without errors
+- [ ] Check validation accuracy output: ensure accuracy > 0.5 (or baseline) after training
+- [ ] Verify model saving: check `./spacy_model` directory is created with model files
+- [ ] Test predictions: run script and check sample predictions match expected categories
+- [ ] Load saved model: `import spacy; nlp = spacy.load("./spacy_model")` and test inference
+- [ ] Check for data issues: ensure CSV loads with `latin-1` encoding without errors
+- [ ] Verify no NaN errors: confirm training data is cleaned (no empty strings or floats)
+- [ ] Test integration prep: confirm model can be loaded in a Streamlit context (no import errors)
+
+## Future Enhancements
+- Increase dataset size with more labeled alerts for better accuracy.
+- Add location extraction using spaCy NER in `app.py`.
+- Save versions of the model with the best accuracy
+
+## How to run / verify locally
+From the project directory:
+```bash
+# Install dependencies
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+pip install spacy-lookups-data
+
+# Run training
+python3 classifications.py
+
+# Check output for accuracy
+
+## Summary
+This branch implements spaCy-based NLP for classifying campus safety alert types and extracting locations. It replaces keyword-based methods with a trained text classification model, improving accuracy on alert categorization. The model is trained on sample data, saved for reuse, and prepared for integration into the Streamlit app with fallback to rule-based logic. This provides a scalable foundation for automated alert processing in the Campus Safety Language Map.
+
