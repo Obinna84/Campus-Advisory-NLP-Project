@@ -1,0 +1,36 @@
+key,name,category,lat,lon,aliases
+blackburn_center,Blackburn University Center,howard_building,38.923983572766595,-77.01933038707256,Blackburn Center|Blackburn|Blackburn University Center|the blackburn center
+founders_library,Founders Library,howard_building,38.92240545847878,-77.01969593095609,Founders Library|Founders|the library|library
+college_hall_south,College Hall South,howard_building,38.919834984892546,-77.01771673157863,College Hall South|CHS
+college_hall_north,College Hall North,howard_building,38.921228794279656,-77.01798395943011,College Hall North|CHN
+frederick_douglass_memorial_hall,School of Business,howard_building,38.924495368210636,-77.02188495335278,Frederick Douglass Memorial Hall|School of Business|Business School|SOB
+cramton_auditorium,Cramton Auditorium,howard_building,38.924520117712134,-77.02106819296692,Cramton Auditorium|Cramton
+greene_stadium,Greene Stadium,howard_building,38.92564142178064,-77.02080443949282,Greene Stadium|William H Greene Stadium|Stadium
+burr_gymnasium,Burr Gymnasium,howard_building,38.92630643521692,-77.02188029377375,Burr Gymnasium|Burr Gym|Gym
+bethune_annex,Bethune Annex,howard_building,38.92101990971673,-77.01759374254195,Bethune Annex
+tubman_quadrangle,Tubman Quadrangle,howard_building,38.9222824509034,-77.01802063376161,Tubman Quadrangle|Tubman Quad|Quad
+the_yard,The Yard,howard_building,38.9237280103249,-77.02019369115196,The Yard|Yard|the yard
+
+georgia_ave_and_howard_pl_nw,Georgia Ave & Howard Pl NW,sample_data_location,38.922369852654775,-77.0222739169076,Georgia Ave & Howard Pl NW|Georgia Ave and Howard Pl NW
+5th_and_v_st_nw,5th St & V St NW,sample_data_location,38.918275656526475,-77.01894015887187,5th St & V St NW|5th and V St NW
+8th_and_barry_pl_nw,8th St & Barry Pl NW,sample_data_location,38.92088557006174,-77.0231187548417,8th St & Barry Pl NW|8th and Barry Pl NW
+9th_st_and_v_st_nw,9th St & V St NW,sample_data_location,38.91778033173821,-77.02403632215703,9th St & V St NW|9th and V St NW
+11th_st_and_florida_st_nw,11th St & Florida Ave NW,sample_data_location,38.920756409631814,-77.02703857975618,11th St & Florida Ave NW|11th St and Florida Ave NW
+georgia_ave_and_florida_ave_nw,Georgia Ave & Florida Ave NW,sample_data_location,38.91626623674519,-77.02192064313763,Georgia Ave & Florida Ave NW|Georgia Ave and Florida Ave NW
+vermont_and_v_st_nw,Vermont Ave & V St NW,sample_data_location,38.9180635163748,-77.0247704232891,Vermont Ave & V St NW|Vermont and V St NW
+7th_st_and_fairmont_st_nw,7th St & Fairmont St NW,sample_data_location,38.925164997716244,-77.02268599581787,7th St & Fairmont St NW|7th St and Fairmont St NW
+2nd_and_w_st_nw,2nd St & W St NW,sample_data_location,38.9191767122515,-77.01475988068391,2nd St & W St NW|2nd and W St NW
+400_block_of_college_st_nw,400 Block of College St NW,sample_data_location,38.92126830602747,-77.01834976319762,400 Block of College St NW
+500_block_of_gresham_pl_nw,500 Block of Gresham Pl NW,sample_data_location,38.9269286391398,-77.02117430795208,500 Block of Gresham Pl NW
+600_block_of_t_st_nw,600 Block of T St NW,sample_data_location,38.915434383982394,-77.0204044164843,600 Block of T St NW
+600_block_of_w_st_nw,600 Block of W St NW,sample_data_location,38.918871126238365,-77.02085482994316,600 Block of W St NW
+700_block_of_gresham_st_nw,700 Block of Gresham St NW,sample_data_location,38.926458906191485,-77.02307337136062,700 Block of Gresham St NW
+900_block_of_v_st_nw,900 Block of V St NW,sample_data_location,38.91808652372956,-77.02481388055257,900 Block of V St NW
+500_block_of_w_st_nw,500 Block of W St NW,sample_data_location,38.91869118820669,-77.01925473958673,500 Block of W St NW
+500_block_of_college_street_nw,500 Block of College Street NW,sample_data_location,38.92112852767403,-77.01950483450909,500 Block of College Street NW
+515_harvard_st_nw,515 Harvard St NW,sample_data_location,38.92761021173396,-77.02143086216454,515 Harvard St NW
+200_block_of_w_st_nw,200 Block of W St NW,sample_data_location,38.919551141371386,-77.01505872179605,200 Block of W St NW
+2100_block_of_8th_st_nw,2100 Block of 8th St NW,sample_data_location,38.9179423309745,-77.02312813805743,2100 Block of 8th St NW
+2100_block_of_9th_st_nw,2100 Block of 9th St NW,sample_data_location,38.917926537299365,-77.02316535314758,2100 Block of 9th St NW
+2200_block_of_8th_st_nw,2200 Block of 8th St NW,sample_data_location,38.9195289620903,-77.02327641003583,2200 Block of 8th St NW
+2200_block_of_9th_st_nw,2200 Block of 9th St NW,sample_data_location,38.91942050918181,-77.02391322367443,2200 Block of 9th St NW
