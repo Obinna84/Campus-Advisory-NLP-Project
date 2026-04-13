@@ -65,7 +65,9 @@ def evaluate_model(nlp, val_examples):
         if predicted_label == true_label:
             correct += 1
     accuracy = correct / total
+    scores = nlp.evaluate(val_examples)
     print(f"Validation Accuracy: {accuracy:.2f}")
+    print(f"NER F1 Score: {scores['ents_f']}")
 
 evaluate_model(nlp, val_examples)
 
@@ -91,4 +93,4 @@ for text in test_text:
     predicted_category = predict_category(nlp, text)
     print(f"Predicted category for '{text}': {predicted_category}")
 
-nlp.to_disk("spacy_model")
+#nlp.to_disk("spacy_model")
