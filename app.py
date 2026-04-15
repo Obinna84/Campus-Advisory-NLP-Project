@@ -9,7 +9,7 @@ from streamlit.components.v1 import html
 from campus_safety.data import enrich_dataframe, load_default_data
 from campus_safety.visuals import build_map
 
-st.set_page_config(page_title="Campus Advisory NLP Project", page_icon="🛡️", layout="wide")
+st.set_page_config(page_title="Campus Advisory NLP Project", layout="wide")
 
 
 @st.cache_data(show_spinner=False)
@@ -17,7 +17,7 @@ def load_uploaded_csv(uploaded_file) -> pd.DataFrame:
     return pd.read_csv(uploaded_file, encoding="latin-1")
 
 
-st.title("🛡️ Campus Advisory NLP Project")
+st.title("NLP Campus Safety Map")
 st.caption(
     "Classify incident reports, extract locations, and visualize campus safety patterns with a cleaner NLP + mapping workflow."
 )
