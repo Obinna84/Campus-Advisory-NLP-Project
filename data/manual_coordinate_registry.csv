@@ -10,6 +10,8 @@ burr_gymnasium,Burr Gymnasium,howard_building,38.92630643521692,-77.021880293773
 bethune_annex,Bethune Annex,howard_building,38.92101990971673,-77.01759374254195,Bethune Annex
 tubman_quadrangle,Tubman Quadrangle,howard_building,38.9222824509034,-77.01802063376161,Tubman Quadrangle|Tubman Quad|Quad
 the_yard,The Yard,howard_building,38.9237280103249,-77.02019369115196,The Yard|Yard|the yard
+mackey, Howard Architecture Building, howard_building,38.92213485572596,-77.0215453172239, Mackey|Howard Architecture Building
+lkd, Howard Engineering Building, howard_building,38.92158300316373,-77.02121762011355, LKD|Howard Engineering Building
 
 georgia_ave_and_howard_pl_nw,Georgia Ave & Howard Pl NW,sample_data_location,38.922369852654775,-77.0222739169076,Georgia Ave & Howard Pl NW|Georgia Ave and Howard Pl NW
 5th_and_v_st_nw,5th St & V St NW,sample_data_location,38.918275656526475,-77.01894015887187,5th St & V St NW|5th and V St NW
